@@ -15,7 +15,7 @@ membriTeam.forEach((element) => {
         
         Nome: ${element.nome}
         Ruolo: ${element.ruolo}
-        Foto: ${element.foto}
+        Foto: ${element.ruolo}
 
         ===========================================
     `)
@@ -23,28 +23,42 @@ membriTeam.forEach((element) => {
 
 
 
-let main = document.getElementsByTagName("main");
+let contenitore = document.getElementById("contenitore");
 let elementiDaInserire = "";
 membriTeam.forEach((element) => {
-    
+
+    elementiDaInserire += `
+        <div class='team'>
+            <br>
+                <p>================= Membro ==================</p>
+                <p><b>Nome: </b>${element.nome}</p>
+                <p><b>Ruolo: </b>${element.ruolo}</p>
+                <p><b>Foto: </b>${element.ruolo}</p>
+                <p>==========================================</p>
+            <br>
+        </div>
+    `;
+
+
+    /*
     let br1 = document.createElement("br");
-    main.appendChild(br1);
+    contenitore.appendChild(br1);
     let p1 = document.createElement("p").innerHTML = "================= Membro ==================";
-    main.appendChild(p1);
+    contenitore.appendChild(p1);
     let pNome = document.createElement("p").innerHTML = "<b>Nome: </b>" + element.nome;
-    main.appendChild(pNome);
+    contenitore.appendChild(pNome);
     let pRuolo = document.createElement("p").innerHTML = "<b>Ruolo: </b>" + element.ruolo;
-    main.appendChild(pRuolo);
+    contenitore.appendChild(pRuolo);
     let pFoto = document.createElement("p").innerHTML = "<b>Foto: </b>" + element.foto;
-    main.appendChild(pFoto);
+    contenitore.appendChild(pFoto);
     let p2 = document.createElement("p").innerHTML = "===========================================";
-    main.appendChild(p2);
+    contenitore.appendChild(p2);
 //    let br2 = document.createElement("br");
-    main.appendChild(br1);
+    contenitore.appendChild(br1);*/
 });
 
 
 
 
 console.log(elementiDaInserire);
-//main.i = elementiDaInserire;
+contenitore.innerHTML = elementiDaInserire;
