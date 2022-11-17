@@ -20,3 +20,31 @@ membriTeam.forEach((element) => {
         ===========================================
     `)
 });
+
+
+
+let main = document.getElementsByTagName("main");
+let elementiDaInserire = "";
+membriTeam.forEach((element) => {
+    
+    let br1 = document.createElement("br");
+    main.appendChild(br1);
+    let p1 = document.createElement("p").innerHTML = "================= Membro ==================";
+    main.appendChild(p1);
+    let pNome = document.createElement("p").innerHTML = "<b>Nome: </b>" + element.nome;
+    main.appendChild(pNome);
+    let pRuolo = document.createElement("p").innerHTML = "<b>Ruolo: </b>" + element.ruolo;
+    main.appendChild(pRuolo);
+    let pFoto = document.createElement("p").innerHTML = "<b>Foto: </b>" + element.foto;
+    main.appendChild(pFoto);
+    let p2 = document.createElement("p").innerHTML = "===========================================";
+    main.appendChild(p2);
+//    let br2 = document.createElement("br");
+    main.appendChild(br1);
+});
+
+
+
+
+console.log(elementiDaInserire);
+//main.i = elementiDaInserire;
