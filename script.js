@@ -28,33 +28,17 @@ let elementiDaInserire = "";
 membriTeam.forEach((element) => {
 
     elementiDaInserire += `
-        <div class='team'>
-            <br>
-                <p>================= Membro ==================</p>
-                <p><b>Nome: </b>${element.nome}</p>
-                <p><b>Ruolo: </b>${element.ruolo}</p>
-                <p><b>Foto: </b>${element.ruolo}</p>
-                <p>==========================================</p>
-            <br>
+        <div >
+            <div class="card" style="width: 18rem;">
+                <img src="${element.foto}" class="card-img-top" alt="${element.nome}">
+                    <div class="card-body">
+                        <h2>${element.nome}</h2>
+                        <h5>${element.ruolo}</h5>
+                    </div>
+            </div>
         </div>
     `;
 
-
-    /*
-    let br1 = document.createElement("br");
-    contenitore.appendChild(br1);
-    let p1 = document.createElement("p").innerHTML = "================= Membro ==================";
-    contenitore.appendChild(p1);
-    let pNome = document.createElement("p").innerHTML = "<b>Nome: </b>" + element.nome;
-    contenitore.appendChild(pNome);
-    let pRuolo = document.createElement("p").innerHTML = "<b>Ruolo: </b>" + element.ruolo;
-    contenitore.appendChild(pRuolo);
-    let pFoto = document.createElement("p").innerHTML = "<b>Foto: </b>" + element.foto;
-    contenitore.appendChild(pFoto);
-    let p2 = document.createElement("p").innerHTML = "===========================================";
-    contenitore.appendChild(p2);
-//    let br2 = document.createElement("br");
-    contenitore.appendChild(br1);*/
 });
 
 
