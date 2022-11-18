@@ -15,7 +15,7 @@ membriTeam.forEach((element) => {
         
         Nome: ${element.nome}
         Ruolo: ${element.ruolo}
-        Foto: ${element.ruolo}
+        Foto: ${element.foto}
 
         ===========================================
     `)
